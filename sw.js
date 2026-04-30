@@ -1,11 +1,11 @@
 // Cache per la PWA
 const CACHE_NAME = 'uni-agenda-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/source/css/style.css',
-  '/assets/icons/icon-192x192.png',
+  './',
+  './index.html',
+  './manifest.json',
+  './source/css/style.css',
+  './assets/icons/icon-192x192.png',
 ];
 
 // Installazione del Service Worker
