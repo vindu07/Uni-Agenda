@@ -9,7 +9,7 @@ const loginBtn = document.getElementById('login-btn');
 // Registra il Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('./sw.js')
       .then(registration => console.log('Service Worker registrato:', registration))
       .catch(err => console.log('Errore registrazione ServiceWorker:', err));
   });
