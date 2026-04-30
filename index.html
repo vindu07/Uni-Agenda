@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="standalone" content="width=device-width, scale=1.0">
+  <title>Uni Agenda</title>
+
+  <!-- Link a Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Link al manifest per la PWA -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Link al CSS personalizzato (opzionale, per override) -->
+  <link rel="stylesheet" href="/source/css/style.css">
+
+  <!-- Icona dell'app -->
+  <link rel="icon" href="/assets/icons/icon-192x192.png" type="image/png">
+</head>
+<body class="bg-black min-h-screen text-white">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Uni Agenda</h1>
+      <button id="login-btn" class="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-900 transition">
+        Accedi
+      </button> 
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container mx-auto p-4">
+    
+  </main>
+
+  <!-- Script per la PWA e la logica -->
+  <script src="/source/js/app.js"></script>
+</body>
+</html>
