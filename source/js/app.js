@@ -19,6 +19,10 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// carica HTML
+await loadHTML('./source/html/menu.html');
+
+
 // Gestione autenticazione
 profileBtn.addEventListener('click', () => {
   
@@ -38,6 +42,9 @@ async function fetchEvents() {
 // Pagina menu
 menuBtn.addEventListener('click', () => {
 
+  const menuDiv = document.getElementById('menu-container');
+  menuDiv.classList.toggle('visible');
+
   loadPage("menu");
 });
 
@@ -48,7 +55,7 @@ async function loadPage(page){
   if(typeof page != "string") return;
 
   switch(page){
-    case "menu": loadHTML("./source/html/menu.html").then(setTimeout(menu.initMenu, 200));
+    case "menu": menu.initMenu;
     break;
   }
 

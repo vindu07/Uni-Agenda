@@ -11,6 +11,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 
+  border-radius: 1rem;
+
 }
 
 main {
@@ -22,6 +24,7 @@ main {
 
 footer {
     border-top: 2px solid var(--footer-margin);
+    border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;
 }
 
 button {
@@ -45,6 +48,31 @@ button {
 .header-icons{
     height: 1.5rem;
     width: 1.5rem;
+
+    fill: var(--button-color);
+}
+
+#menu-container {
+    border-radius: 1rem;
+    border-right: 1px solid var(--footer-margin);
+
+    opacity: 0;
+    transform: translateX(-100%);
+
+    transition:
+        opacity 0.2s ease-out,
+        transform 0.2s ease-out;
+}
+#menu-container.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-icons{
+    height: 1.5rem;
+    width: 1.5rem;
+
+    border-radius: 1rem;
 
     fill: var(--button-color);
 }

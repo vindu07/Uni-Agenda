@@ -39,7 +39,7 @@ body.theme-dark{
 .header-bg{background: var(--header-bg);}
 .header-color{color: var(--header-color)}
 
-.main-bg{background: var(--main-bg);}
+.main-bg{background: var(--main-bg-1);}
 .main-color{color: var(--main-color)}
 
 .footer-bg{background: var(--footer-bg);}
