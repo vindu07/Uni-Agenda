@@ -6,7 +6,7 @@ const API_BASE_URL = 'https://uni-agenda-api.andrea-vinduska.workers.dev/api';
 let authToken = null;
 
 // DOM Elements
-const loginBtn = document.getElementById('login-btn');
+const profileBtn = document.getElementById('profile-btn');
 const menuBtn = document.getElementById('menu-btn');
 
 
@@ -20,7 +20,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // Gestione autenticazione
-loginBtn.addEventListener('click', () => {
+profileBtn.addEventListener('click', () => {
   
   fetchEvents();
 });

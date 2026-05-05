@@ -4,7 +4,7 @@
   "start_url": "./",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#3b82f6",
+  "theme_color": "#000000",
   "description": "PWA per gestire gli impegni universitari",
   "icons": [
     {
