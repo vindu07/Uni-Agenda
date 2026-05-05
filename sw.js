@@ -1,5 +1,5 @@
 // Cache per la PWA
-const CACHE_NAME = 'uni-agenda-v1';
+const CACHE_NAME = 'uni-agenda-v4';
 const urlsToCache = [
   './',
   './index.html',

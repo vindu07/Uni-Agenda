@@ -1,0 +1,50 @@
+body {
+
+  /* Colore di fallback in caso di errore nel caricamento */
+  background-color: var(--header-bg);
+  /* Rimuovi margini predefiniti del body */
+  margin: 0;
+  padding: 0;
+  /* Altezza minima per assicurarsi che lo sfondo copra tutto */
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+}
+
+main {
+  border-top-left-radius: 1rem; border-top-right-radius: 1rem;
+
+  background: linear-gradient(to bottom, var(--main-bg-1), var(--main-bg-2));
+
+}
+
+footer {
+    border-top: 2px solid var(--footer-margin);
+}
+
+button {
+    margin: 0; 
+    border: 0;
+}
+
+.footer-icons{
+    height: 1.5rem;
+    width: 1.5rem;
+
+    fill: var(--footer-color);
+}
+.footer-icons:hover{
+    transform:scale(1.2);
+    transition-duration: 0.5s;
+}
+
+#home-icon{height: 2rem; width: 2rem; }
+
+.header-icons{
+    height: 1.5rem;
+    width: 1.5rem;
+
+    fill: var(--button-color);
+}

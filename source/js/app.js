@@ -1,9 +1,13 @@
+import * as menu from "./menu.js";
+
+
 // Configurazione API (sostituisci con il tuo dominio Cloudflare)
 const API_BASE_URL = 'https://uni-agenda-api.andrea-vinduska.workers.dev/api';
 let authToken = null;
 
 // DOM Elements
 const loginBtn = document.getElementById('login-btn');
+const menuBtn = document.getElementById('menu-btn');
 
 
 // Registra il Service Worker
@@ -31,5 +35,42 @@ async function fetchEvents() {
   .catch(console.error);
 }
 
+// Pagina menu
+menuBtn.addEventListener('click', () => {
 
+  loadPage("menu");
+});
+
+
+
+async function loadPage(page){
+
+  if(typeof page != "string") return;
+
+  switch(page){
+    case "menu": loadHTML("./source/html/menu.html").then(setTimeout(menu.initMenu, 200));
+    break;
+  }
+
+  console.log("Pagina caricata: " + page);
+
+}
+
+async function loadHTML(path){
+
+  const main = document.getElementById("MAIN");
+  main.innerHTML = ""; // pulizia
+
+  try{
+
+    fetch(path)
+      .then(response => response.text())
+        .then(html => main.innerHTML = html);
+
+  }
+  catch(ex){
+    console.error("Errore fetch html: " + path + ", ", ex);
+  }
+
+}
 
