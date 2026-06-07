@@ -13,14 +13,18 @@
   <link rel="stylesheet" href="./source/css/themes.css">
   <link rel="stylesheet" href="./source/css/app.css">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+
   <!-- Icona dell'app -->
   <link rel="icon" href="./assets/icons/icon-192x192.png" type="image/png">
+  
 </head>
 
 <body class="header-bg width-full">
   
   <!-- Header -->
-  <header class="header-bg header-color px-4 py-6">
+  <!--header class="header-bg header-color px-4 py-6">
     <div class="flex justify-between">
       <button id="menu-btn" class="button-bg button-color px-4 py-2 rounded-2">
         <svg class="header-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -46,7 +50,7 @@
   </header>
 
   <!-- Main content -->
-  <main id="MAIN" class="main-color"></main>
+  <!--main id="MAIN" class="main-color"></main>
 
   <footer class="footer-bg footer-color py-4 flex gap-1 justify-center">
 
@@ -79,7 +83,90 @@
     </button>
     
 
-  </footer>
+  </footer-->
+
+  <div class="screen">
+      <div class="topbar">
+        <div class="topbar-logo">uni<span>agenda</span></div>
+        <div class="topbar-actions">
+          <div class="icon-btn"><i class="ti ti-bell" aria-hidden="true"></i></div>
+          <div class="icon-btn"><i class="ti ti-search" aria-hidden="true"></i></div>
+          <div class="avatar-btn">MC</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="greeting">
+          <div class="greeting-sub">Lunedì, 26 maggio</div>
+          <div class="greeting-name">Ciao,<br><em>Marco</em> 👋</div>
+        </div>
+        <div class="progress-card">
+          <div class="progress-header">
+            <span class="progress-label">Questa Settimana</span>
+            <span class="progress-pct">68%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" style="width:68%"></div>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-num" style="color:var(--accent3)">4</div>
+            <div class="stat-label">Task oggi</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" style="color:var(--teal)">2</div>
+            <div class="stat-label">Scadenze</div>
+          </div>
+        </div>
+        <div class="section-title">In scadenza</div>
+        <div class="task-item">
+          <div class="task-check done"><i class="ti ti-check"></i></div>
+          <div class="task-info">
+            <div class="task-name done">Esercizi Analisi III</div>
+            <div class="task-meta">consegnato ieri</div>
+          </div>
+          <div class="task-tag tag-math">Mat</div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-info">
+            <div class="task-name">Relazione di laboratorio</div>
+            <div class="task-meta">domani ore 9:00</div>
+          </div>
+          <div class="task-tag tag-bio">Bio</div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-info">
+            <div class="task-name">Saggio su Tucidide</div>
+            <div class="task-meta">venerdì 30 maggio</div>
+          </div>
+          <div class="task-tag tag-hist">Stor</div>
+        </div>
+      </div>
+      <div class="bottom-nav">
+        <div class="nav-item active">
+          <div class="nav-pill"></div>
+          <i class="ti ti-home" aria-hidden="true"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item">
+          <i class="ti ti-calendar" aria-hidden="true"></i>
+          <span>Cal.</span>
+        </div>
+        <div class="nav-item" style="flex:0.8">
+          <div class="nav-add"><i class="ti ti-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="nav-item">
+          <i class="ti ti-book" aria-hidden="true"></i>
+          <span>Diario</span>
+        </div>
+        <div class="nav-item">
+          <i class="ti ti-notes" aria-hidden="true"></i>
+          <span>Note</span>
+        </div>
+      </div>
+
 
   <!-- Script per la PWA e la logica -->
   <script src="./source/js/app.js" type="module"></script>
