@@ -1,7 +1,6 @@
 body {
 
-  /* Colore di fallback in caso di errore nel caricamento */
-  background-color: var(--header-bg);
+   background: linear-gradient(to top, var(--body-bg-1), var(--body-bg-2));
   /* Rimuovi margini predefiniti del body */
   margin: 0;
   padding: 0;
@@ -15,17 +14,117 @@ body {
 
 }
 
-main {
-  border-top-left-radius: 1rem; border-top-right-radius: 1rem;
+header {
+    
+    padding: 1rem;
+    border-bottom: 0.05rem solid var(--footer-margin);
+    color: var(--body-color);
+    
+    display: flex; flex-direction: row; justify-content: space-between;
+    
+}
+.header-containers {
+    display:flex; flex-direction: row; gap: 0.5rem;
+}
+#header-uni {color: var(--accent-1); }
+header .header-btn {
+    background: var(--icons-bg); color: var(--icons-1);
+    border: 0.05rem solid var(--footer-margin); border-radius: 50%;
 
-  background: linear-gradient(to bottom, var(--main-bg-1), var(--main-bg-2));
+    height: 2.5rem; width: 2.5rem;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+header .header-icons {
+    stroke: var(--icons-1); fill: var(--icons-1);
+    height: 1.5rem; width: 1.5rem;
 
 }
+#header-login-btn {
+    background: linear-gradient(135deg, var(--accent-3), var(--accent-2) );  
+    color: var(--body-color);
+
+    border: 0.1rem solid var(--accent-1);
+}
+
+
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+.task-overview {
+    background: var(--icons-bg);
+    color: var(--icons-1);
+    border-radius: 1rem; border: 0.05rem solid var(--footer-margin);
+    padding: 1rem;
+}
+#main-task-overview {
+    display: grid;
+    
+    grid-gap: 5px; 
+}
+#task-progress-bar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 5px; 
+}
+
+#progress-bar {height: 0.5rem; width: 100%; background: blue; }
+
+
+
+
+
+
+
+
 
 footer {
-    border-top: 2px solid var(--footer-margin);
-    border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;
+    background: var(--footer-bg);
+
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    border-top: 0.05rem solid var(--footer-margin);
+
+    display: flex; flex-direction: row; justify-content: space-between;
 }
+.footer-btn {
+    padding: 2px;
+    background: var(--footer-bg);
+    color: var(--icons-1);
+    display: flex; flex-direction: column; gap: 0.25rem; justify-items: center; 
+}
+.footer-indicators {
+    width: 2rem; height: 0.25rem; 
+    align-self: center;
+    
+    border-radius: 2px;
+    background: var(--footer-bg);
+}
+.footer-desc {
+    font-size: 0.75rem;
+}
+footer .footer-icons {
+    height: 1.5rem; width: 1.5rem;
+
+    stroke-width: 0;
+    fill: var(--icons-1); stroke: var(--icons-1);
+}
+.activated .footer-indicators {background: var(--accent-1); }
+.activated .footer-desc {color: var(--accent-1); }
+.activated .footer-icons {stroke: var(--accent-1); fill: var(--accent-1); }
+
+#footer-new-circle {
+    height: 3rem; width: 3rem;
+
+    border-radius: 50%; border: 0.1rem solid var(--accent-1);
+    padding: 0.5rem;
+    
+    background: linear-gradient(135deg, var(--accent-3), var(--accent-2) );  
+}
+#footer-new-icon {stroke: var(--footer-color); }
+
+
 
 button {
     margin: 0; 

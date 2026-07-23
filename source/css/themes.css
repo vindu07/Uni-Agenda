@@ -1,14 +1,18 @@
 :root{
-    --header-bg: #222;
-    --header-color: #ffffff;
 
-    --main-bg-1: #fff;
-    --main-bg-2: #eee;
-    --main-color: #000;
+    --body-bg-1: #fff;
+    --body-bg-2: #eee;
+    --body-color: #000;
 
-    --footer-bg: #fff;
+    --footer-bg: #deceff;
     --footer-color: #000;
-    --footer-margin: #ddd;
+    --footer-margin: #aaa;
+
+    --icons-1: #555;
+    --icons-bg: #555;
+    --accent-1: #1436e0;
+    --accent-2: #488bc2;
+    --accent-3: #7a23b4;
 
     --button-bg: #ffffff;
     --button-color: #000000;
@@ -17,16 +21,20 @@
 }
 
 body.theme-dark{
-    --header-bg: #ddd;
-    --header-color: #ffffff;
 
-    --main-bg-1: #000000;
-    --main-bg-2: #222;
-    --main-color: #ffffff;
+    --body-bg-1: #000;
+    --body-bg-2: #0a0a0a;
+    --body-color: #ffffff;
 
-    --footer-bg: #000;
-    --footer-color: #ffffff;
+    --footer-bg: #1f1f2b;
+    --footer-color: #fff;
     --footer-margin: #333;
+
+    --icons-1: #aaa;
+    --icons-bg: #1a1a1a;
+    --accent-1: #1e53d0;
+    --accent-2: #488bc2;
+    --accent-3: #7a23b4;
 
     --button-bg: #000;
     --button-color: #fff;
@@ -35,9 +43,6 @@ body.theme-dark{
 }
 
 
-
-.header-bg{background: var(--header-bg);}
-.header-color{color: var(--header-color)}
 
 .main-bg{background: var(--main-bg-1);}
 .main-color{color: var(--main-color)}
