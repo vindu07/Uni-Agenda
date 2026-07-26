@@ -12,7 +12,8 @@
     --icons-bg: #555;
     --accent-1: #1436e0;
     --accent-2: #488bc2;
-    --accent-3: #7a23b4;
+    --accent-3: #e733ea;
+    --accent-4: #15d1d7;
 
     --button-bg: #ffffff;
     --button-color: #000000;
@@ -34,7 +35,8 @@ body.theme-dark{
     --icons-bg: #1a1a1a;
     --accent-1: #1e53d0;
     --accent-2: #488bc2;
-    --accent-3: #7a23b4;
+    --accent-3: #a427a4;
+    --accent-4: #10a5ab;
 
     --button-bg: #000;
     --button-color: #fff;

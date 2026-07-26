@@ -49,9 +49,13 @@ header {
     
 }
 .header-containers {
-    display:flex; flex-direction: row; gap: 0.5rem;
+    display:flex; flex-direction: row; gap: 0.5rem; align-items: center;
 }
-#header-uni {color: var(--accent-1); }
+#logo #primary { fill: var(--accent-2); height: 1rem; width: 1rem; }
+#logo #secondary { fill: var(--accent-3); }
+
+header h4 {color: var(--icons-1); }
+
 header .header-btn {
     background: var(--icons-bg); color: var(--icons-1);
     border: 0.05rem solid var(--footer-margin); border-radius: 50%;
@@ -65,12 +69,11 @@ header .header-icons {
 
 }
 #header-login-btn {
-    background: linear-gradient(135deg, var(--accent-3), var(--accent-2) );  
+    background: linear-gradient(135deg, var(--accent-3), var(--accent-4) );  
     color: var(--body-color);
 
-    border: 0.1rem solid var(--accent-1);
+    border: 0.1rem solid var(--accent-2);
 }
-
 
 
 main {
@@ -79,11 +82,6 @@ main {
     padding: 1rem;
     overflow: hidden;
 }
-
-
-
-
-
 
 
 footer {
@@ -119,17 +117,17 @@ footer .footer-icons {
     stroke-width: 0;
     fill: var(--icons-1); stroke: var(--icons-1);
 }
-.activated .footer-indicators {background: var(--accent-1); }
-.activated .footer-desc {color: var(--accent-1); }
-.activated .footer-icons {stroke: var(--accent-1); fill: var(--accent-1); }
+.activated .footer-indicators {background: var(--accent-2); }
+.activated .footer-desc {color: var(--accent-2); }
+.activated .footer-icons {stroke: var(--accent-2); fill: var(--accent-2); }
 
 #footer-new-circle {
     height: 3rem; width: 3rem;
 
-    border-radius: 50%; border: 0.1rem solid var(--accent-1);
+    border-radius: 50%; border: 0.1rem solid var(--accent-2);
     padding: 0.5rem;
     
-    background: linear-gradient(135deg, var(--accent-3), var(--accent-2) );  
+    background: linear-gradient(135deg, var(--accent-3), var(--accent-4) );  
 }
 #footer-new-icon {stroke: var(--footer-color); }
 

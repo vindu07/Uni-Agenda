@@ -1,11 +1,20 @@
 // Cache per la PWA
-const CACHE_NAME = 'uni-agenda-v4';
+const CACHE_NAME = 'uniAgenda-v3';
 const urlsToCache = [
   './',
   './index.html',
   './manifest.json',
-  './source/css/style.css',
-  './assets/icons/icon-192x192.png',
+  './source/css/app.css',
+  './source/css/themes.css',
+  './source/css/dashboard.css',
+  './source/html/dashboard.html',
+  './source/html/calendar.html',
+  './source/html/notes.html',
+  './source/js/app.js',
+  './source/js/dashboard.js',
+  './source/js/calendar.js',
+  './source/js/notes.js',
+  './assets/images/icon.svg',
 ];
 
 // Installazione del Service Worker
@@ -30,7 +39,7 @@ self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification(data.title, {
       body: data.body,
-      icon: '/assets/icons/icon-192x192.png',
+      icon: './assets/images/icon.svg',
       badge: '/assets/fallback-icon.png'
     })
   );

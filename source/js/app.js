@@ -1,6 +1,8 @@
-import * as menu from "./menu.js";
+import * as Dashboard from "./dashboard.js";
+import * as Calendar from "./calendar.js";
+import * as Notes from "./notes.js";
 
-// carica HTML
+// carica pagina iniziale
 await loadPage("dashboard");
 
 // Configurazione API
@@ -28,7 +30,7 @@ settingsBtn.addEventListener('click', ()=>{
 
 function removeActivated(){
   let elements = [homeBtn, calendarBtn, notesBtn, moreBtn];
-  elements.forEach((element)=>{element.classList.remove('activated')});
+  elements.forEach((element) => {element.classList.remove('activated')});
 }
 homeBtn.addEventListener('click', ()=>{
   removeActivated();
@@ -68,7 +70,7 @@ if ('serviceWorker' in navigator) {
 
 
 
-
+/*
 // Gestione autenticazione
 loginBtn.addEventListener('click', () => {
   
@@ -83,7 +85,7 @@ async function fetchEvents() {
   .then((res) => res.json())
   .then(console.log)
   .catch(console.error);
-}
+}*/
 
 
 
@@ -104,6 +106,7 @@ async function loadPage(page){
     case "notes": await loadHTML("./source/html/notes.html");
     break;
   }
+  launchScript(page);
 
   console.log("Pagina caricata: " + page);
 
@@ -126,5 +129,19 @@ async function loadHTML(path){
   }
 
 }
-
+async function launchScript(page){
+  if(typeof page != "string"){
+    
+    console.log("-- invalid argument -- app.launchScript");
+    return;
+  }
+  switch(page){
+    case "dashboard": await Dashboard.initDashboard();
+    break;
+    case "calendar": await Calendar.initCalendar();
+    break;
+    case "notes": await Notes.initNotes();
+    break;
+  }
+}
 
