@@ -1,13 +1,60 @@
 import * as menu from "./menu.js";
 
+// carica HTML
+await loadPage("dashboard");
 
-// Configurazione API (sostituisci con il tuo dominio Cloudflare)
+// Configurazione API
 const API_BASE_URL = 'https://uni-agenda-api.andrea-vinduska.workers.dev/api';
 let authToken = null;
 
 // DOM Elements
-const profileBtn = document.getElementById('profile-btn');
-const menuBtn = document.getElementById('menu-btn');
+const loginBtn = document.getElementById('header-login-btn');
+const settingsBtn = document.getElementById('header-setting-btn');
+const homeBtn = document.getElementById('footer-home-btn');
+const calendarBtn = document.getElementById('footer-calendar-btn');
+const newTaskBtn = document.getElementById('footer-create-btn');
+const notesBtn = document.getElementById('footer-notes-btn');
+const moreBtn = document.getElementById('footer-more-btn');
+
+// Event listener pulsanti
+
+loginBtn.addEventListener('click', ()=>{
+  console.log('-- login btn clicked --');
+});
+
+settingsBtn.addEventListener('click', ()=>{
+  console.log('-- settings btn clicked --');
+});
+
+function removeActivated(){
+  let elements = [homeBtn, calendarBtn, notesBtn, moreBtn];
+  elements.forEach((element)=>{element.classList.remove('activated')});
+}
+homeBtn.addEventListener('click', ()=>{
+  removeActivated();
+  homeBtn.classList.add('activated');
+  loadPage('dashboard');
+});
+calendarBtn.addEventListener('click', ()=>{
+  removeActivated();
+  calendarBtn.classList.add('activated');
+  loadPage('calendar');
+});
+notesBtn.addEventListener('click', ()=>{
+  removeActivated();
+  notesBtn.classList.add('activated');
+  loadPage('notes');
+});
+moreBtn.addEventListener('click', ()=>{
+  removeActivated();
+  moreBtn.classList.add('activated');
+  console.log('-- more btn clicked --');
+});
+
+newTaskBtn.addEventListener('click', ()=>{
+  removeActivated();
+  console.log('-- new task btn clicked --');
+});
 
 
 // Registra il Service Worker
@@ -19,12 +66,11 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// carica HTML
-await loadHTML('./source/html/menu.html');
+
 
 
 // Gestione autenticazione
-profileBtn.addEventListener('click', () => {
+loginBtn.addEventListener('click', () => {
   
   fetchEvents();
 });
@@ -39,23 +85,23 @@ async function fetchEvents() {
   .catch(console.error);
 }
 
-// Pagina menu
-menuBtn.addEventListener('click', () => {
-
-  const menuDiv = document.getElementById('menu-container');
-  menuDiv.classList.toggle('visible');
-
-  loadPage("menu");
-});
 
 
 
 async function loadPage(page){
 
-  if(typeof page != "string") return;
+  if(typeof page != "string"){
+    
+    console.log("-- invalid argument -- app.loadPage");
+    return;
+  }
 
   switch(page){
-    case "menu": menu.initMenu;
+    case "dashboard": await loadHTML("./source/html/dashboard.html");
+    break;
+    case "calendar": await loadHTML("./source/html/calendar.html");
+    break;
+    case "notes": await loadHTML("./source/html/notes.html");
     break;
   }
 
@@ -65,7 +111,7 @@ async function loadPage(page){
 
 async function loadHTML(path){
 
-  const main = document.getElementById("MAIN");
+  const main = document.querySelector('main');
   main.innerHTML = ""; // pulizia
 
   try{
@@ -80,4 +126,5 @@ async function loadHTML(path){
   }
 
 }
+
 
