@@ -24,10 +24,13 @@
     background-color: var(--icons-1);
     
     border-radius: 1rem;
+
 }
-progress::-moz-progress-bar { background: linear-gradient(to right, var(--accent-3), var(--accent-4)); }
+progress::-moz-progress-bar { background: linear-gradient(to right, var(--accent-3), var(--accent-4));}
 progress::-webkit-progress-value { background: linear-gradient(to right, var(--accent-3), var(--accent-4)); }
 progress { color: linear-gradient(to right, var(--accent-3), var(--accent-4)); }
+
+progress::-webkit-progress-bar { border-radius: 1rem; }
 
 #task-overview-bottom {
     display: flex; flex-direction: row; justify-content: space-between; gap: 1rem;
