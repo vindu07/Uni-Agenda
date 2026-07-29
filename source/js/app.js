@@ -106,7 +106,7 @@ async function loadPage(page){
     case "notes": await loadHTML("./source/html/notes.html");
     break;
   }
-  launchScript(page);
+  setTimeout(()=> {launchScript(page); }, 100);
 
   console.log("Pagina caricata: " + page);
 

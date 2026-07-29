@@ -86,6 +86,7 @@ main {
 
 footer {
     position: relative; bottom: 0; 
+    height: 10vh;
 
     background: var(--footer-bg);
 
@@ -182,3 +183,5 @@ button {
 
     fill: var(--button-color);
 }
+
+button:hover { cursor: pointer; }

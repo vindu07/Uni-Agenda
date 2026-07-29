@@ -1,3 +1,8 @@
+#calendar-title {
+    display: flex; flex-direction: row; justify-content: space-around;
+    padding-bottom: 1rem;
+    color: var(--accent-2);
+}
 #calendar-header {
     display: flex; flex-direction: row; justify-content: space-around;
     padding-bottom: 1rem;
@@ -6,6 +11,11 @@
     display: grid; grid-template-columns: repeat(7, 1fr); 
     
 }
+.calendar-buttons { background: none; align-content: center; }
+.calendar-buttons svg {
+    stroke: var(--accent-2  );
+    height: 1.5rem; aspect-ratio: 1;
+}
 
 div.calendar-days {
     display: flex; justify-content: center; align-items: center;
@@ -13,6 +23,41 @@ div.calendar-days {
 }
 
 div.calendar-days.before-today { filter:brightness(90%); }
-div.calendar-days.sunday { color: var(--accent-4); }
+div.calendar-days.sunday { color: var(--accent-2); }
 div.calendar-days.not-current-month { color: var(--body-color); filter:brightness(60%); }
 div.calendar-days.today { background:var(--accent-3); }
+
+
+div.calendar-container {
+    background: var(--icons-bg);
+
+    border-radius: 1rem; border: 0.05rem solid var(--footer-margin);
+    padding: 1rem;
+}
+
+#calendar-task-container {
+    
+    position: relative; bottom: -5vh; height: 45vh;
+
+    display: flex; flex-direction: column; gap: 2rem;
+    align-items: space-between; justify-items: center;
+    
+    overflow-y: auto;
+}
+
+.calendar-task-background {
+    display: flex; flex-direction: row; justify-items: space-between; align-items: center; 
+    filter: brightness(50%);
+}
+
+div.calendar-task-lines {
+    width: 80%;
+    height: 0.05rem;
+
+    background: var(--icons-1);
+}
+div.calendar-task-hours {
+    color: var(--icons-1);
+    padding: none;
+    width: 20%;
+}

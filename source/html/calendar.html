@@ -1,55 +1,162 @@
-<div id="calendar-title">
-    <button class="calendar-buttons" id="calendar-prev-month"></button>
-    <h3>Luglio 2026</h3>
-    <button class="calendar-buttons" id="calendar-next-month"></button>
+<div class="calendar-container">  
+    <div id="calendar-title">
+        <button class="calendar-buttons" id="calendar-prev-month">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <h3 id="calendar-title-text">Lugli 2026</h3>
+        <button class="calendar-buttons" id="calendar-next-month">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+    </div>
+    <div id="calendar-grid">
+        <div id="calendar-header">
+            <h5 class="calendar-cell">L</h5>
+            <h5 class="calendar-cell">M</h5>
+            <h5 class="calendar-cell">M</h5>
+            <h5 class="calendar-cell">G</h5>
+            <h5 class="calendar-cell">V</h5>
+            <h5 class="calendar-cell">S</h5>
+            <h5 class="calendar-cell">D</h5>
+        </div>
+        <div id="calendar-body">
+            <div class="calendar-days before-today not-current-month"><h5>29<h5></div>
+            <div class="calendar-days before-today not-current-month"><h5>30</h5></div>
+            <div class="calendar-days before-today"><h5>1</h5></div>
+            <div class="calendar-days before-today"><h5>2</h5></div>
+            <div class="calendar-days before-today"><h5>3</h5></div>
+            <div class="calendar-days before-today"><h5>4</h5></div>
+            <div class="calendar-days sunday before-today"><h5>5</h5></div>
+            <div class="calendar-days before-today"><h5>6</h5></div>
+            <div class="calendar-days before-today"><h5>7</h5></div>
+            <div class="calendar-days before-today"><h5>8</h5></div>
+            <div class="calendar-days before-today"><h5>9</h5></div>
+            <div class="calendar-days before-today"><h5>10</h5></div>
+            <div class="calendar-days before-today"><h5>11</h5></div>
+            <div class="calendar-days sunday before-today"><h5>12</h5></div>
+            <div class="calendar-days before-today"><h5>13</h5></div>
+            <div class="calendar-days before-today"><h5>14</h5></div>
+            <div class="calendar-days before-today"><h5>15</h5></div>
+            <div class="calendar-days before-today"><h5>16</h5></div>
+            <div class="calendar-days before-today"><h5>17</h5></div>
+            <div class="calendar-days before-today"><h5>18</h5></div>
+            <div class="calendar-days sunday before-today"><h5>19</h5></div>
+            <div class="calendar-days before-today"><h5>20</h5></div>
+            <div class="calendar-days before-today"><h5>21</h5></div>
+            <div class="calendar-days before-today"><h5>22</h5></div>
+            <div class="calendar-days before-today"><h5>23</h5></div>
+            <div class="calendar-days before-today"><h5>24</h5></div>
+            <div class="calendar-days before-today"><h5>25</h5></div>
+            <div class="calendar-days sunday before-today"><h5>26</h5></div>
+            <div class="calendar-days before-today"><h5>27</h5></div>
+            <div class="calendar-days today"><h5>28</h5></div>
+            <div class="calendar-days"><h5>29</h5></div>
+            <div class="calendar-days"><h5>30</h5></div>
+            <div class="calendar-days"><h5>31</h5></div>
+            <div class="calendar-days not-current-month"><h5>1</h5></div>
+            <div class="calendar-days sunday not-current-month"><h5>2</h5></div>
+
+        </div>   
+
+    </div>
+</div>  
+
+<div id="calendar-task-container" class="">
+    
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>00:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>01:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>02:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>03:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>04:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>05:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>06:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>07:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>08:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>09:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>10:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>11:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>12:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>13:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>14:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>15:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>16:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>17:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>18:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>19:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>20:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>21:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>22:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+    <div class="calendar-task-background">
+        <div class="calendar-task-hours"><h6>23:00</h6></div>
+        <div class="calendar-task-lines"></div>
+    </div>
+
 </div>
-<div id="calendar-grid">
-    <div id="calendar-header">
-        <h5 class="calendar-cell">L</h5>
-        <h5 class="calendar-cell">M</h5>
-        <h5 class="calendar-cell">M</h5>
-        <h5 class="calendar-cell">G</h5>
-        <h5 class="calendar-cell">V</h5>
-        <h5 class="calendar-cell">S</h5>
-        <h5 class="calendar-cell">D</h5>
-    </div>
-    <div id="calendar-body">
-        <div class="calendar-days before-today not-current-month"><h5>29<h5></div>
-        <div class="calendar-days before-today not-current-month"><h5>30</h5></div>
-        <div class="calendar-days before-today"><h5>1</h5></div>
-        <div class="calendar-days before-today"><h5>2</h5></div>
-        <div class="calendar-days before-today"><h5>3</h5></div>
-        <div class="calendar-days before-today"><h5>4</h5></div>
-        <div class="calendar-days sunday before-today"><h5>5</h5></div>
-        <div class="calendar-days before-today"><h5>6</h5></div>
-        <div class="calendar-days before-today"><h5>7</h5></div>
-        <div class="calendar-days before-today"><h5>8</h5></div>
-        <div class="calendar-days before-today"><h5>9</h5></div>
-        <div class="calendar-days before-today"><h5>10</h5></div>
-        <div class="calendar-days before-today"><h5>11</h5></div>
-        <div class="calendar-days sunday before-today"><h5>12</h5></div>
-        <div class="calendar-days before-today"><h5>13</h5></div>
-        <div class="calendar-days before-today"><h5>14</h5></div>
-        <div class="calendar-days before-today"><h5>15</h5></div>
-        <div class="calendar-days before-today"><h5>16</h5></div>
-        <div class="calendar-days before-today"><h5>17</h5></div>
-        <div class="calendar-days before-today"><h5>18</h5></div>
-        <div class="calendar-days sunday before-today"><h5>19</h5></div>
-        <div class="calendar-days before-today"><h5>20</h5></div>
-        <div class="calendar-days before-today"><h5>21</h5></div>
-        <div class="calendar-days before-today"><h5>22</h5></div>
-        <div class="calendar-days before-today"><h5>23</h5></div>
-        <div class="calendar-days before-today"><h5>24</h5></div>
-        <div class="calendar-days before-today"><h5>25</h5></div>
-        <div class="calendar-days sunday before-today"><h5>26</h5></div>
-        <div class="calendar-days before-today"><h5>27</h5></div>
-        <div class="calendar-days today"><h5>28</h5></div>
-        <div class="calendar-days"><h5>29</h5></div>
-        <div class="calendar-days"><h5>30</h5></div>
-        <div class="calendar-days"><h5>31</h5></div>
-        <div class="calendar-days not-current-month"><h5>1</h5></div>
-        <div class="calendar-days sunday not-current-month"><h5>2</h5></div>
-
-        
-
-    </div>
