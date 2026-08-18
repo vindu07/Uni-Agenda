@@ -12,20 +12,24 @@
     
 }
 .calendar-buttons { background: none; align-content: center; }
+.calendar-buttons:hover { transform: scale(1.5); transition: ease; transition-duration: 200ms; }
 .calendar-buttons svg {
     stroke: var(--accent-2  );
     height: 1.5rem; aspect-ratio: 1;
 }
 
-div.calendar-days {
+.calendar-days {
     display: flex; justify-content: center; align-items: center;
-    padding: 0.25rem; border-radius: 1rem;
+    padding: 0.25rem; border-radius: 1rem; background: none; color: var(--body-color);
 }
+.calendar-days:hover {transform: scale(1.5); transition: ease; transition-duration: 200ms; }
 
-div.calendar-days.before-today { filter:brightness(90%); }
-div.calendar-days.sunday { color: var(--accent-2); }
-div.calendar-days.not-current-month { color: var(--body-color); filter:brightness(60%); }
-div.calendar-days.today { background:var(--accent-3); }
+.calendar-days.before-today { filter:brightness(75%); }
+.calendar-days.sunday { color: var(--accent-2); }
+.calendar-days.not-current-month { color: var(--body-color); }
+.calendar-days.current { background:var(--accent-3); }
+.calendar-days.today { color:var(--accent-3); }
+.calendar-days.today.current { background:var(--accent-3); color: var(--body-color); }
 
 
 div.calendar-container {

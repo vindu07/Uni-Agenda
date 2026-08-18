@@ -81,6 +81,8 @@ main {
     max-height: 85vh !important;
     padding: 1rem;
     overflow: hidden;
+
+    transition: ease; transition-duration: 500ms;
 }
 
 

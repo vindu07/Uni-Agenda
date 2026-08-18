@@ -26,9 +26,9 @@
     border-radius: 1rem;
 
 }
-progress::-moz-progress-bar { background: linear-gradient(to right, var(--accent-3), var(--accent-4));}
-progress::-webkit-progress-value { background: linear-gradient(to right, var(--accent-3), var(--accent-4)); }
-progress { color: linear-gradient(to right, var(--accent-3), var(--accent-4)); }
+progress::-moz-progress-bar { background: linear-gradient(to right, var(--accent-3), var(--accent-4)); border-radius: 1rem; }
+progress::-webkit-progress-value { background: linear-gradient(to right, var(--accent-3), var(--accent-4)); border-radius: 1rem; }
+progress { color: linear-gradient(to right, var(--accent-3), var(--accent-4)); border-radius: 1rem; }
 
 progress::-webkit-progress-bar { border-radius: 1rem; }
 
